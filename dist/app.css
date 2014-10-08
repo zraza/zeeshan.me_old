@@ -824,7 +824,7 @@ section.split > div {
 .navigation {
   opacity: 0;
   position: fixed;
-  z-index: 4;
+  z-index: 20;
   top: 0;
   width: 100%;
   background: #00b877;
@@ -1025,7 +1025,7 @@ section.split > div {
   z-index: 2;
 }
 .recent-work {
-  background: #17bb9b url(/assets/img/pattern-blurred.jpg);
+  background: #232429;
   background-size: cover;
   color: #fff;
 }
@@ -1078,71 +1078,8 @@ section.split > div {
   top: 0;
   background: rgba(0, 3, 28, 0.9);
 }
-#quotes {
-  background-color: #fff;
-  text-align: center;
-  position: relative;
-}
-#quotes blockquote {
-  font-size: 16px;
-  margin-bottom: 5px;
-}
-#quotes a.author {
-  color: #394042;
-  text-transform: uppercase;
-  font-family: 'Gotham-Book', sans-serif;
-  letter-spacing: 1px;
-}
-#quotes hr {
-  margin-top: 35px;
-  margin-bottom: 35px;
-  width: 50px;
-  border-top: 0;
-  border-right: 0;
-  border-left: 0;
-  border-bottom: 1px solid #EEEEEE;
-}
-#quotes ul {
-  text-align: center;
-}
-/* flexslider style */
-ul.flex-direction-nav li {
-  overflow: auto;
-}
-ul.flex-direction-nav li a {
-  9display: inline-block;
-  position: absolute;
-}
-ul.flex-direction-nav li a.flex-prev {
-  left: 100px;
-  top: 50%;
-}
-ul.flex-direction-nav li a.flex-next {
-  right: 100px;
-  top: 50%;
-}
-ul.flex-direction-nav li a:before {
-  font-family: "icon" !important;
-  font-style: normal !important;
-  font-weight: normal !important;
-  font-variant: normal !important;
-  text-transform: none !important;
-  line-height: 1;
-  font-size: 25px;
-  display: inline-block;
-}
-.flexslider ul.flex-direction-nav li a.flex-next:before {
-  content: "\e001";
-}
-.flexslider ul.flex-direction-nav li a.flex-prev:before {
-  content: "\e000";
-}
-ul.flex-direction-nav li a.flex-prev:hover,
-ul.flex-direction-nav li a.flex-next:hover {
-  color: #394042;
-}
 .work-experience {
-  background: #ffffff url(/assets/img/pattern-dotted.png);
+  background: #fff;
 }
 .work-experience li {
   padding: 1em 0;
@@ -1266,7 +1203,10 @@ ul.flex-direction-nav li a.flex-next:hover {
   }
 }
 .skills {
-  background: #17bb9b bottom url(/assets/img/pattern-lined.jpg);
+  background: #212226;
+}
+.skills h2 {
+  color: #fff;
 }
 .skills .container {
   padding-left: 30px;
@@ -1340,7 +1280,8 @@ ul.flex-direction-nav li a.flex-next:hover {
   float: right;
 }
 .testimonials {
-  background: #ffffff bottom url(http://tobiasahlin.com/images/arrow-inverted-long-white@2x.png);
+  background: #1A181C;
+  color: #fff;
 }
 .testimonials .container {
   padding-left: 30px;
@@ -1389,7 +1330,6 @@ ul.flex-direction-nav li a.flex-next:hover {
 }
 .testimonials span i {
   font-size: 0.7em;
-  color: #000;
   font-style: normal;
   font-weight: normal;
   padding-left: 10px;
