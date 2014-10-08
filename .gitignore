@@ -4,3 +4,4 @@ site/
 __assets/
 .tmp/
 *.DS_Store
+dist/
