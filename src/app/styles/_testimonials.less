@@ -1,0 +1,55 @@
+.testimonials {
+   //margin-top: 1px;
+   background:#fff bottom url(http://tobiasahlin.com/images/arrow-inverted-long-white@2x.png);
+   .container{
+      padding-left: @grid-gutter-width;
+      padding-right: @grid-gutter-width;
+   }
+   ul{
+      li{
+         .make-md-column(6);
+        
+      }
+   }
+
+   blockquote {
+      font-size: 0.6em;
+      text-align: left;
+      //background: #f9f9f9;
+      //border-left: 10px solid #ccc;
+      //margin: 1.5em 10px;
+      //padding: 0.5em 200px;
+      quotes: "\201C""\201D""\2018""\2019";
+   }
+   blockquote:before {
+      color: @brand-primary;
+      content: open-quote;
+      font-size: 4em;
+      line-height: 0.1em;
+      margin-right: 0.25em;
+      vertical-align: -0.4em;
+   }
+   blockquote:after {
+      color: @brand-primary;
+      content: close-quote;
+      font-size: 4em;
+      line-height: 0.1em;
+      margin-left: 0.25em;
+      vertical-align: -0.4em;
+   }
+   span {
+         display: block;
+         text-align: left;
+         font-size: 0.6em;
+         color: @brand-primary;
+         font-weight: bold;
+         margin-left: 45px;
+          i{
+         font-size: 0.7em;
+         color: #000;
+         font-style: normal;
+         font-weight: normal;
+         padding-left: 10px;
+      }
+      }
+}

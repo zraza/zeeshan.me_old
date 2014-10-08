@@ -1,0 +1,112 @@
+.navigation {
+   opacity: 0;
+   position: fixed;
+   z-index: 4;
+   top: 0;
+   width: 100%;
+   background: @brand-primary;
+   min-height: 100%;
+   height: 100%;
+   .animation-duration(0.4s);
+}
+.brand {
+   font-size: 55px;
+   padding: 0;
+   margin: 0;
+   //color: @brand-primary;
+   //background: @brand-primary;
+   color: #fff;
+   border-radius: 70px;
+   display: block;
+   @media (min-width: @screen-sm-min) {
+      font-size: 75px;
+      padding: 16px 10px;
+      float: left;
+   }
+}
+.main-menu {
+   padding: @grid-gutter-width;
+   li {
+      border-bottom: 2px solid darken(@brand-primary, 2%);
+      text-align: left;
+      a {
+         display: block;
+         padding: 20px;
+         color: #fff;
+         font-size: 2.0em;
+         &:hover {
+            text-decoration: none;
+            border-bottom: 2px solid darken(@brand-primary, 3%);
+         }
+      }
+   }
+}
+.btn-rounded {
+   display: block;
+   width: 52px;
+   height: 52px;
+   border-radius: 52px;
+   opacity: .85;
+   background: @brand-primary;
+}
+.btn-nav {
+   position: fixed;
+   right: 65px;
+   top: 25px;
+   color: #fff;
+   //margin-left: -25px;
+   z-index: 999;
+   //background-color: #d9d9d9;
+   //background: @brand-primary;
+   color: #fff;
+}
+.btn-nav span {
+   position: absolute;
+   display: inline-block;
+   left: 15px;
+   top: 25px;
+   width: 21px;
+   height: 2px;
+   background-color: #fff;
+   .transition(all 0.3s ease);
+}
+.btn-nav span:before {
+   top: 7px;
+}
+.btn-nav span:after {
+   top: -7px;
+}
+.btn-nav span:before, .btn-nav span:after {
+   position: absolute;
+   display: inline-block;
+   left: 0;
+   width: 21px;
+   height: 2px;
+   content: '';
+   background-color: #fff;
+   .transition(all 0.3s ease);
+   .transform-origin(4px center 0);
+}
+.btn-nav.close span {
+   background: rgba(0, 0, 0, 0);
+}
+.btn-nav.close span:before {
+   .rotate(-45deg)
+}
+.btn-nav.close span:after {
+   .rotate(45deg)
+}
+.btn-nav.close span:before {
+   position: absolute;
+   left: 1px;
+   top: 0;
+   width: 20px;
+   .transform-origin(center center 0)
+}
+.btn-nav.close span:after {
+   position: absolute;
+   left: 1px;
+   top: 0;
+   width: 20px;
+   .transform-origin(center center 0)
+}
