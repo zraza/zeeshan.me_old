@@ -6,7 +6,7 @@
    <title ng-bind="appPageTitle">Zeeshan Raza</title>
    <meta name="description" content="">
    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
    <style type="text/css">
    body {
       padding: 0;
@@ -20,7 +20,7 @@
       z-index: 1000;
       background: #E2E2E2;
       -webkit-animation-duration: 0.0s;
-          animation-duration: 0.0s;
+      animation-duration: 0.0s;
    }
    .spinner {
       top: 40%;
@@ -82,14 +82,18 @@
 
    <div class="content" ng-class="loaded?'animated fadeIn':'hidden'">
       <section class="navigation" ng-hide="!showNav" ng-class="showNav?'animated fadeInDown':'animated fadeOutUp'">
-         <!--<button class="btn btn-clear" ng-click="showNav=false"><i class="icon-cancel"></i>
-      </button>-->
          <ul class="main-menu">
-            <li><a href="/" title="Projects I've worked on">Work</a>
+            <li><a href="#recent-work" ng-click="showNav=false">Work</a>
             </li>
-            <li><a href="about" title="Learn more about me">About</a>
+            <li><a href="#skills" ng-click="showNav=false">Skills &amp; Certification</a>
             </li>
-            <li><a href="contact" title="Let's get in touch">Contact</a>
+            <li><a href="#work-experience" ng-click="showNav=false">Work Experience</a>
+            </li>
+            <li><a href="#education" ng-click="showNav=false">Education</a>
+            </li>
+            <li><a href="#testimonials" ng-click="showNav=false">Testimonials</a>
+            </li>
+            <li><a href="#contact" ng-click="showNav=false">Contact</a>
             </li>
          </ul>
       </section>
@@ -122,6 +126,7 @@
             <div class="scroll-down animated third pulse">
                <i class="icon-down-open-big "></i>
             </div>
+            <span class="scroll-down-text">Scroll down</span>
 
          </div>
 
@@ -136,7 +141,7 @@
          </div>
          -->
          <div class="recent-work-item" ng-repeat="work in works">
-            <div style="background: url({{work.preview}})  no-repeat;background-size: cover ">
+            <div ng-style="{'background-image':'url('+work.preview+')','background-size': 'cover','background-repeat':'no-repeat'}">
                <div class="overlay">
                   <div class="overlay-inner">
                      <h4>{{work.title}}</h4>
@@ -149,6 +154,7 @@
       </section>
 
       <section class="skills">
+         <a name="skills"></a>
          <div class="container">
             <h2>Skills &amp; Certification</h2>
 
@@ -224,6 +230,7 @@
       </section>
 
       <section class="work-experience">
+         <a name="work-experience"></a>
          <h2>Work Experience</h2>
          <ul class="timeline">
 
@@ -237,7 +244,8 @@
                   <div class="detail">
                      <h3>Euromoney Institutional Investor</h3>
                      <span>April 2012 - present</span>
-                     <p>Managing onshore and offshore development teams using scrum methodology, this role has 50% of devlopment and 50% management. Streamline front-end devlopmet process using moderen technloigies Gulp, Bower, JSHint and others</p>
+                     <p>Managing onshore and offshore development teams using scrum methodology. Responsible for technical direction and leadership, implementation of best practices and optimal design patterns, streamlined front-end development process using modern technologies using Gulp, Bower, LESS, JSHint and others.</p>
+                     <p>Creating quick prototypes using AngularJS/Mocked data for visual concepts and interactions with intention to integrate with final code base with minimal changes.</p>
                   </div>
 
                </div>
@@ -253,7 +261,8 @@
                   <div class="detail">
                      <h3>Structured Retail Products</h3>
                      <span>June 2008 – April 2012</span>
-                     <p>Managing onshore and offshore development teams using scrum methodology, this role has 50% of devlopment and 50% management. Streamline front-end devlopmet process using moderen technloigies Gulp, Bower, JSHint and others</p>
+                     <p>Working as part of a small team of developers, my role was consist of the maintenance and development of in-house developed CMS using LAMP stack, and JavaScript to create dashboard functionality to customize user home page. I was also responsible for bit of server management, and designing RESTful API to expose over 8M products.</p>
+
                   </div>
                </div>
             </li>
@@ -268,7 +277,7 @@
                   <div class="detail">
                      <h3>Saudi Oger Limited</h3>
                      <span>November 2004 – April 2008</span>
-                     <p>Managing onshore and offshore development teams using scrum methodology, this role has 50% of devlopment and 50% management. Streamline front-end devlopmet process using moderen technloigies Gulp, Bower, JSHint and others</p>
+                     <p>I was responsible for end-to-end web application development process including analysis, design, development and testing, release ensuring cross browser compatibility and accessibility</p>
                   </div>
                </div>
             </li>
@@ -282,7 +291,7 @@
                   <div class="detail">
                      <h3>Tower Technologies (Pvt.) Limited</h3>
                      <span>April 2001 – November 2004</span>
-                     <p>Managing onshore and offshore development teams using scrum methodology, this role has 50% of devlopment and 50% management. Streamline front-end devlopmet process using moderen technloigies Gulp, Bower, JSHint and others</p>
+                     <p>I was responsible for designing and implementation of Java/Web based projects and identifying artifacts that have to be produced for ISO Certification.</p>
                   </div>
                </div>
             </li>
@@ -290,7 +299,30 @@
          </ul>
       </section>
 
+      <section class="education">
+         <a name="education"></a>
+         <div class="container">
+            <h2>Education</h2>
+            <ul>
+               <li>
+                  <span><strong>Masters (MS) in Computer Science</strong><br />
+                    Punjab Institute of Computer Sciences Lahore - Pakistan
+                    <i>1998 - 2000</i>
+                  </span>
+                  
+               </li>
+               <li>
+                  <span><strong>Bachelor of Science</strong><br />
+                    Govt. FC College, Lahore - Pakistan
+                    <i>1996 - 1998</i>
+                  </span>
+                  
+               </li>    
+            </ul>
 
+
+         </div>
+      </section>
 
       <section class="testimonials">
          <a name="testimonials"></a>
@@ -309,59 +341,33 @@
       </section>
 
 
-      <section class="contact" fit-height style="overflow:hidden;">
-         <span class="brand"><i class="icon-logo"></i>
-         </span>
+      <section class="contact">
+
          <div class="container">
 
-            <div class="contact-top">
-               <div class="contact-info">
-                  <h2>Contact me</h2>
-                  <p>Interested in working together or just want to say hello?
-                     <br>Drop me a line.</p>
+            <a name="contact"></a>
+            <div class="contact-info">
 
-                  <hr>
-                  <div itemscope itemtype="http://schema.org/Person">
-                     <span class="name-schema" itemprop="name">
-                        <span class="fn">Zeeshan Raza</span>
+
+               <div itemscope itemtype="http://schema.org/Person">
+                  <span class="name-schema" itemprop="name">
+                     <span class="fn">Zeeshan Raza</span>
+                  </span>
+                  <ul>
+                     <span itemprop="address">
+                        <li>London, United Kindom</li>
                      </span>
-                     <ul>
-                        <span itemprop="address">
-                           <li>London, United Kindom</li>
-                        </span>
-                        <span itemprop="telephone">
-                           <li>++44 7411435522</li>
-                        </span>
-                        <li><a href="mailto:hello@zeeshan.me" title="drop a line" itemprop="email">hello@zeeshan.me</a>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-
-
-
-               <div class="contact-form">
-                  <form id="form" method="post" action="">
-                     <div class="form">
-                        <div class="name">
-                           <input tabindex="1" name="Name" id="name" type="text" placeholder="Name (*)" />
-                        </div>
-
-                        <div class="email">
-                           <input tabindex="2" name="email" id="email" type="text" placeholder="Email (*)" />
-                        </div>
-                        <div>
-                           <textarea name="message" cols="10" rows="5" id="message" placeholder="Your message here..."></textarea>
-                        </div>
-                        <br />
-                        <button class="btn-lg btn btn-primary">SEND</button>
-                     </div>
-                  </form>
-
-                  <div id="response"></div>
-
+                     <span itemprop="telephone">
+                        <li>++44 7411435522</li>
+                     </span>
+                     <li><a href="mailto:hello@zeeshan.me" title="drop a line" itemprop="email">hello@zeeshan.me</a>
+                     </li>
+                  </ul>
                </div>
             </div>
+
+
+
 
             <ul class="social">
                <li><a href="#"><i class="icon-github-circled"></i></a>
@@ -377,7 +383,7 @@
       </section>
    </div>
    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-   
+
    <!-- inject:vendor:css -->
 
    <link rel="stylesheet" href="/animate.css/animate.css">

@@ -74,18 +74,6 @@ angular.module('app.default')
          preview: '/assets/img/work/naat.png',
          title: 'Naat',
          what: 'Design, Branding, Concept, Development'
-      }, {
-         preview: '/assets/img/work/london-now.png',
-         title: 'London Now',
-         what: 'Design, Branding, Concept, Development'
-      }, {
-         preview: '/assets/img/work/inspirational-cards.png',
-         title: 'Inspirational Cards',
-         what: 'Design, Branding, Concept, Development'
-      }, {
-         preview: '/assets/img/work/naat.png',
-         title: 'Naat',
-         what: 'Design, Branding, Concept, Development'
       }];
 
    }).controller('TestimonialCtrl', function($scope, $http) {

@@ -857,9 +857,9 @@ section.split > div {
 }
 .main-menu li a {
   display: block;
-  padding: 20px;
+  padding: 15px;
   color: #fff;
-  font-size: 2.0em;
+  font-size: 1.8em;
 }
 .main-menu li a:hover {
   text-decoration: none;
@@ -987,11 +987,16 @@ section.split > div {
   -webkit-animation-iteration-count: 10;
   animation-iteration-count: 10;
 }
+.introduction .scroll-down-text {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.6em;
+}
 .introduction p {
   font-size: 20px;
 }
 .main-bg {
-  background-color: #17BB9B;
+  background-color: #00b877;
   left: -5%;
   overflow: hidden;
   position: fixed;
@@ -1056,8 +1061,8 @@ section.split > div {
 }
 .recent-work .recent-work-item .overlay {
   position: relative;
-  top: 220px;
-  height: 220px;
+  top: 250px;
+  height: 250px;
   background: rgba(0, 3, 28, 0.2);
   color: #fff;
   -webkit-transition: all 0.3s ease-in-out;
@@ -1078,8 +1083,62 @@ section.split > div {
   top: 0;
   background: rgba(0, 3, 28, 0.9);
 }
+/*
+.recent-work {
+   h2 {
+      background: #A4B3BF;
+      color: #fff;
+      margin: 0;
+      padding: 40px;
+      display: none;
+   }
+   padding: 0;
+   margin: 0;
+   .container {
+      padding: 0;
+      margin: 0;
+   }
+   
+
+   .recent-work-item{
+      
+      width: 33.3333%;
+      padding: -100px;
+      background: #fff;
+      overflow: hidden;
+      float: left;
+      //margin: 0;
+      //padding: 0;
+      //height: 350px;
+      img {
+         position: relative;
+         top: 0;
+         width: 100%;
+         .transition(all .7s ease-in-out);
+         &:hover{
+          //  width: 120%;
+            //margin: -7%;
+         }
+      }   
+      .overlay{
+         position: relative;
+         bottom: 0;
+         z-index: 10;
+         background: rgb(35, 36, 41,0.7);
+      }
+   }
+
+
+}
+
+*/
 .work-experience {
   background: #fff;
+}
+.work-experience .x li {
+  margin: 0;
+  padding: 0;
+  font-size: 0.6em;
 }
 .work-experience li {
   padding: 1em 0;
@@ -1101,7 +1160,7 @@ section.split > div {
 }
 @media (min-width: 768px) {
   .work-experience li {
-    margin-top: -130px;
+    margin-top: -150px;
   }
   .work-experience .timeline {
     position: relative;
@@ -1203,14 +1262,16 @@ section.split > div {
   }
 }
 .skills {
-  background: #212226;
+  background: #1A181C;
 }
 .skills h2 {
   color: #fff;
 }
-.skills .container {
-  padding-left: 30px;
-  padding-right: 30px;
+@media (min-width: 768px) {
+  .skills .container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }
 .skills ul:before,
 .skills ul:after {
@@ -1279,13 +1340,57 @@ section.split > div {
   font-weight: bold;
   float: right;
 }
-.testimonials {
+.education {
   background: #1A181C;
+}
+.education h2 {
   color: #fff;
 }
-.testimonials .container {
-  padding-left: 30px;
-  padding-right: 30px;
+@media (min-width: 768px) {
+  .education .container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+.education ul:before,
+.education ul:after {
+  content: " ";
+  display: table;
+}
+.education ul:after {
+  clear: both;
+}
+.education ul li {
+  margin-bottom: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 0.5em;
+  text-align: left;
+}
+@media (min-width: 992px) {
+  .education ul li {
+    float: left;
+    width: 50%;
+  }
+}
+.education ul li span {
+  background: none repeat scroll 0 0 #fff;
+  border-radius: 3px;
+  border-left: 15px solid #00b877;
+  display: block;
+  padding: 15px;
+}
+.education ul li span i {
+  font-size: 0.8em;
+  color: #444;
+  font-style: normal;
+  font-weight: bold;
+  float: right;
+}
+.testimonials {
+  background: #f1f1f1;
 }
 .testimonials ul li {
   position: relative;
@@ -1330,6 +1435,7 @@ section.split > div {
 }
 .testimonials span i {
   font-size: 0.7em;
+  color: #000;
   font-style: normal;
   font-weight: normal;
   padding-left: 10px;
@@ -1337,24 +1443,17 @@ section.split > div {
 .contact {
   width: 100%;
   overflow: hidden;
+  background: #212226;
   text-align: left;
   font-size: 0.8em;
 }
-.contact .container {
-  padding: 0;
-  padding-top: 80px;
-  padding-left: 350px;
-}
-.contact .contact-top:before,
-.contact .contact-top:after {
-  content: " ";
-  display: table;
-}
-.contact .contact-top:after {
-  clear: both;
+@media (min-width: 768px) {
+  .contact .container {
+    padding-left: 200px;
+    padding-right: 200px;
+  }
 }
 .contact-info {
-  width: 30%;
   float: left;
   color: #fff;
 }
@@ -1367,59 +1466,14 @@ section.split > div {
 .contact-info a {
   color: #fff;
 }
-.contact-form {
-  width: 65%;
-  float: right;
-}
-.form {
-  width: 100%;
-  overflow: hidden;
-  background-color: #ffffff;
-  padding: 30px;
-  border-radius: 4px;
-}
-/* form style */
-input[type="text"],
-input[type="email"],
-input[type="password"],
-textarea {
-  color: #888;
-  padding: 10px;
-  font-size: 14px;
-  font-family: inherit;
-  font-weight: 400;
-  font-style: normal;
-  text-transform: normal;
-  overflow: auto;
-  vertical-align: middle;
-  margin-bottom: 50px;
-  border: none;
-  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-}
-input[type="text"],
-input[type="email"] {
-  border-bottom: 1px solid #555;
-  width: 100%;
-  min-height: 31px;
-}
-textarea {
-  width: 100%;
-  vertical-align: top;
-  margin-bottom: 0;
-  min-height: 150px;
-}
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="password"]:focus,
-textarea:focus {
-  background-color: #fff;
-  border-color: #394042;
-  border-radius: 0;
-}
 .social {
   margin-top: 50px;
+  width: 300px;
+}
+@media (min-width: 768px) {
+  .social {
+    float: right;
+  }
 }
 .social li {
   margin-left: 30px;
