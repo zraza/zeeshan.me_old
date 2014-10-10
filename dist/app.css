@@ -723,6 +723,17 @@ h6 {
   line-height: 1.20em;
   text-rendering: optimizelegibility;
 }
+@media (max-width: 768px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
 .hidden {
   display: none;
 }
@@ -744,10 +755,9 @@ li {
 section {
   margin-right: auto;
   margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 7.5px;
+  padding-right: 7.5px;
   text-align: center;
-  padding: 30px;
 }
 section:before,
 section:after {
@@ -758,6 +768,9 @@ section:after {
   clear: both;
 }
 @media (min-width: 768px) {
+  section {
+    padding: 30px;
+  }
   section .container {
     padding: 0 150px;
   }
@@ -840,16 +853,21 @@ section.split > div {
   color: #fff;
   border-radius: 70px;
   display: block;
+  padding: 20px 10px;
 }
 @media (min-width: 768px) {
   .brand {
     font-size: 75px;
-    padding: 16px 10px;
     float: left;
   }
 }
 .main-menu {
-  padding: 30px;
+  padding-top: 75px;
+}
+@media (min-width: 768px) {
+  .main-menu {
+    padding: 30px;
+  }
 }
 .main-menu li {
   border-bottom: 2px solid #00ae70;
@@ -859,7 +877,12 @@ section.split > div {
   display: block;
   padding: 15px;
   color: #fff;
-  font-size: 1.8em;
+  font-size: 0.9em;
+}
+@media (min-width: 768px) {
+  .main-menu li a {
+    font-size: 1.8em;
+  }
 }
 .main-menu li a:hover {
   text-decoration: none;
@@ -875,10 +898,14 @@ section.split > div {
 }
 .btn-nav {
   position: fixed;
-  right: 65px;
   top: 25px;
   z-index: 999;
   color: #fff;
+}
+@media (min-width: 768px) {
+  .btn-nav {
+    right: 65px;
+  }
 }
 .btn-nav span {
   position: absolute;
@@ -955,17 +982,24 @@ section.split > div {
 }
 .introduction .headline {
   margin-bottom: 1.2em;
-  font-size: 2.5em;
+  font-size: 1em;
+  margin-top: 150px;
+}
+@media (min-width: 768px) {
+  .introduction .headline {
+    font-size: 2.5em;
+    margin-top: 20px;
+  }
 }
 .introduction .subhead {
   color: #fff;
-  font-size: 0.9em;
+  font-size: 0.6em;
   margin-bottom: 2em;
   margin-top: 3em;
 }
-@media (max-width: 768px) {
-  .introduction {
-    font-size: 0.7em;
+@media (min-width: 768px) {
+  .introduction .subhead {
+    font-size: 0.9em;
   }
 }
 @media (min-width: 768px) {
@@ -987,13 +1021,28 @@ section.split > div {
   -webkit-animation-iteration-count: 10;
   animation-iteration-count: 10;
 }
+@media (max-width: 768px) {
+  .introduction .scroll-down {
+    display: none;
+  }
+}
 .introduction .scroll-down-text {
   display: block;
   margin-top: 10px;
   font-size: 0.6em;
 }
+@media (max-width: 768px) {
+  .introduction .scroll-down-text {
+    display: none;
+  }
+}
 .introduction p {
   font-size: 20px;
+}
+@media (min-width: 768px) {
+  .introduction .btn-lg {
+    font-size: 1.2em;
+  }
 }
 .main-bg {
   background-color: #00b877;
@@ -1013,7 +1062,6 @@ section.split > div {
   top: 0;
   width: 100%;
   z-index: 3;
-  opacity: 0.8;
 }
 @media (min-width: 768px) {
   .main-bg .dotted-overlay {
@@ -1035,25 +1083,23 @@ section.split > div {
   color: #fff;
 }
 .recent-work .recent-work-item {
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
   overflow: hidden;
 }
 @media (min-width: 768px) {
   .recent-work .recent-work-item {
-    float: left;
-    width: 100%;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) and (min-width: 992px) {
   .recent-work .recent-work-item {
     float: left;
     width: 33.33333333%;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 768px) and (min-width: 1200px) {
   .recent-work .recent-work-item {
     float: left;
     width: 33.33333333%;
@@ -1135,11 +1181,6 @@ section.split > div {
 .work-experience {
   background: #fff;
 }
-.work-experience .x li {
-  margin: 0;
-  padding: 0;
-  font-size: 0.6em;
-}
 .work-experience li {
   padding: 1em 0;
 }
@@ -1149,6 +1190,11 @@ section.split > div {
 .work-experience li .detail h3 {
   font-size: 1em;
   margin: 15px 0;
+}
+@media (max-width: 768px) {
+  .work-experience li .detail h3 {
+    font-size: 0.7em;
+  }
 }
 .work-experience li .detail span {
   font-size: 0.5em;
@@ -1392,13 +1438,28 @@ section.split > div {
 .testimonials {
   background: #f1f1f1;
 }
-.testimonials ul li {
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
+@media (min-width: 768px) {
+  .testimonials .container {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
 }
-@media (min-width: 992px) {
+.testimonials ul li {
+  border-bottom: 1px solid #ccc;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+@media (min-width: 768px) {
+  .testimonials ul li {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 0;
+    padding: 0;
+  }
+}
+@media (min-width: 768px) and (min-width: 992px) {
   .testimonials ul li {
     float: left;
     width: 50%;
@@ -1441,21 +1502,20 @@ section.split > div {
   padding-left: 10px;
 }
 .contact {
-  width: 100%;
   overflow: hidden;
   background: #212226;
   text-align: left;
   font-size: 0.8em;
-}
-@media (min-width: 768px) {
-  .contact .container {
-    padding-left: 200px;
-    padding-right: 200px;
-  }
+  padding-bottom: 30px;
 }
 .contact-info {
-  float: left;
+  padding: 15px;
   color: #fff;
+}
+@media (min-width: 768px) {
+  .contact-info {
+    float: left;
+  }
 }
 .contact-info h2 {
   margin-top: 0;
@@ -1466,13 +1526,11 @@ section.split > div {
 .contact-info a {
   color: #fff;
 }
-.social {
-  margin-top: 50px;
-  width: 300px;
-}
 @media (min-width: 768px) {
   .social {
     float: right;
+    margin-top: 50px;
+    width: 300px;
   }
 }
 .social li {

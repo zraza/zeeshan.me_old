@@ -25,7 +25,10 @@
    }
 }
 .main-menu {
-   padding: @grid-gutter-width;
+  padding-top: @grid-gutter-width*2.5;
+   @media (min-width: @screen-sm-min) {
+    padding: @grid-gutter-width;
+  }
    li {
       border-bottom: 2px solid darken(@brand-primary, 2%);
       text-align: left;
@@ -33,7 +36,10 @@
          display: block;
          padding: 15px;
          color: #fff;
+         font-size: 0.9em;
+         @media (min-width: @screen-sm-min) {
          font-size: 1.8em;
+       }
          &:hover {
             text-decoration: none;
             border-bottom: 2px solid darken(@brand-primary, 3%);
