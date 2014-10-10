@@ -13,14 +13,6 @@
 }
 .work-experience {
    background: #fff;// url(/assets/img/pattern-dotted.png);
-   //color: #fff;
-   .x{
-      li{
-         margin: 0;
-         padding: 0;
-         font-size: 0.6em;
-      }
-   }
    li {
       padding: 1em 0;
       //
@@ -31,6 +23,9 @@
          h3 {
             font-size: 1em;
             margin: 15px 0;
+            @media (max-width: @screen-sm-min) {
+               font-size: 0.7em;
+            }
          }
          span {
             font-size: 0.5em;

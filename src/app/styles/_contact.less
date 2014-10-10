@@ -1,19 +1,22 @@
 .contact {
-   width: 100%;
+   
    overflow: hidden;
    background: #212226;
    text-align: left;
    font-size: 0.8em;
+   padding-bottom: @grid-gutter-width;
    @media (min-width: @screen-sm-min) {
    .container{
-      padding-left: 200px;
-      padding-right: 200px;
+      //padding-left: 200px;
+      //padding-right: 200px;
    }
    }
 }
 .contact-info {
-   //width: 30%;
-   float: left;
+   padding: @grid-gutter-width/2;
+   @media (min-width: @screen-sm-min) {
+      float: left;
+   }
    color: #fff;
    h2 {
       margin-top: 0;
@@ -28,10 +31,13 @@
 .social {
    ///text-align: center;
    // display: block;
-   margin-top: 50px;
-   width: 300px;
+   //@media (max-width: @screen-sm-min) {
+   //margin-bottom:;
+//}
    @media (min-width: @screen-sm-min) {
       float:right;
+        margin-top: 50px;
+      width: 300px;
    }
    li {
       margin-left: @grid-gutter-width;

@@ -5,9 +5,10 @@
    background-size: cover;
    color: #fff;
    .recent-work-item {
-      .make-sm-column(12);
+      @media (min-width: @screen-sm-min) {
       .make-md-column(4);
       .make-lg-column(4);
+   }
       overflow: hidden;
       .overlay {
          position: relative;
