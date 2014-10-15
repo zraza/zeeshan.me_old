@@ -22,7 +22,8 @@
     "angular": "~1.2.14",
     "angular-route": "~1.2.14",
     "animate.css": "~3.2.0",
-    "angular-scroll": "~0.6.2"
+    "angular-scroll": "~0.6.2",
+    "angular-head-return": "*"
   },
   "devDependencies": {
     "angular-mocks": "~1.2.14",

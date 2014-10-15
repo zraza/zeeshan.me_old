@@ -709,9 +709,14 @@ input[type="button"].btn-block {
 }
 body {
   background: #E2E2E2;
-  font-size: 26px;
+  font-size: 20px;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   line-height: 1.5;
+}
+@media (min-width: 768px) {
+  body {
+    font-size: 26px;
+  }
 }
 h1,
 h2,
@@ -850,6 +855,7 @@ section.split > div {
   font-size: 55px;
   padding: 0;
   margin: 0;
+  z-index: 1000;
   color: #fff;
   border-radius: 70px;
   display: block;
@@ -982,8 +988,8 @@ section.split > div {
 }
 .introduction .headline {
   margin-bottom: 1.2em;
-  font-size: 1em;
-  margin-top: 150px;
+  font-size: 1.2em;
+  margin-top: 80px;
 }
 @media (min-width: 768px) {
   .introduction .headline {
@@ -993,7 +999,7 @@ section.split > div {
 }
 .introduction .subhead {
   color: #fff;
-  font-size: 0.6em;
+  font-size: 0.8em;
   margin-bottom: 2em;
   margin-top: 3em;
 }
@@ -1011,6 +1017,7 @@ section.split > div {
   margin-top: 100px;
   bottom: 50px;
   border: 1px solid #fff;
+  color: #fff;
   border-radius: 55px;
   height: 55px;
   width: 55px;
@@ -1062,6 +1069,7 @@ section.split > div {
   top: 0;
   width: 100%;
   z-index: 3;
+  opacity: 0.8;
 }
 @media (min-width: 768px) {
   .main-bg .dotted-overlay {
@@ -1084,6 +1092,7 @@ section.split > div {
 }
 .recent-work .recent-work-item {
   overflow: hidden;
+  text-decoration: none;
 }
 @media (min-width: 768px) {
   .recent-work .recent-work-item {
@@ -1091,6 +1100,9 @@ section.split > div {
     min-height: 1px;
     padding-left: 15px;
     padding-right: 15px;
+  }
+  .recent-work .recent-work-item > div {
+    border-radius: 3px;
   }
 }
 @media (min-width: 768px) and (min-width: 992px) {
@@ -1109,8 +1121,8 @@ section.split > div {
   position: relative;
   top: 250px;
   height: 250px;
-  background: rgba(0, 3, 28, 0.2);
-  color: #fff;
+  background: #fff;
+  color: #333;
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -1127,7 +1139,7 @@ section.split > div {
 }
 .recent-work .recent-work-item:hover .overlay {
   top: 0;
-  background: rgba(0, 3, 28, 0.9);
+  background: #ffffff;
 }
 /*
 .recent-work {
@@ -1179,7 +1191,8 @@ section.split > div {
 
 */
 .work-experience {
-  background: #fff;
+  background: #ffffff url(/assets/img/pattern2.jpg);
+  background-size: cover;
 }
 .work-experience li {
   padding: 1em 0;
@@ -1272,6 +1285,10 @@ section.split > div {
     border-radius: 20px;
     border: 4px solid #00b877;
     z-index: 10;
+  }
+  .work-experience .direction-l p,
+  .work-experience .direction-r p {
+    text-align: justify;
   }
   .work-experience .direction-r {
     float: right;
@@ -1437,6 +1454,14 @@ section.split > div {
 }
 .testimonials {
   background: #f1f1f1;
+  /*blockquote:after {
+      color: @brand-primary;
+      content: close-quote;
+      font-size: 4em;
+      line-height: 0.1em;
+      margin-left: 0.25em;
+      vertical-align: -0.4em;
+   }*/
 }
 @media (min-width: 768px) {
   .testimonials .container {
@@ -1468,22 +1493,15 @@ section.split > div {
 .testimonials blockquote {
   font-size: 0.6em;
   text-align: left;
+  margin: 1.5em 10px;
+  padding-left: 30px;
   quotes: "\201C" "\201D" "\2018" "\2019";
 }
 .testimonials blockquote:before {
   color: #00b877;
-  content: open-quote;
   font-size: 4em;
   line-height: 0.1em;
   margin-right: 0.25em;
-  vertical-align: -0.4em;
-}
-.testimonials blockquote:after {
-  color: #00b877;
-  content: close-quote;
-  font-size: 4em;
-  line-height: 0.1em;
-  margin-left: 0.25em;
   vertical-align: -0.4em;
 }
 .testimonials span {
@@ -1493,6 +1511,10 @@ section.split > div {
   color: #00b877;
   font-weight: bold;
   margin-left: 45px;
+}
+.testimonials span img {
+  width: 40px;
+  border-radius: 30px;
 }
 .testimonials span i {
   font-size: 0.7em;
@@ -1531,6 +1553,7 @@ section.split > div {
     float: right;
     margin-top: 50px;
     width: 300px;
+    text-align: right;
   }
 }
 .social li {
@@ -1547,6 +1570,12 @@ section.split > div {
   width: 60px;
   height: 60px;
   display: block;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.social li a:hover {
+  background: #006c46;
 }
 
 

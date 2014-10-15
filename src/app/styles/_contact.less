@@ -36,8 +36,9 @@
 //}
    @media (min-width: @screen-sm-min) {
       float:right;
-        margin-top: 50px;
+      margin-top: 50px;
       width: 300px;
+      text-align:right;
    }
    li {
       margin-left: @grid-gutter-width;
@@ -52,6 +53,10 @@
          width: 60px;
          height: 60px;
          display: block;
+         .transition(all .5s ease-in-out);
+         &:hover{
+            background: darken(@brand-primary,15%);
+         }
       }
    }
 }

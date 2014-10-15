@@ -4,8 +4,9 @@
    <meta charset="utf-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <title ng-bind="appPageTitle">Zeeshan Raza</title>
-   <meta name="description" content="">
+   <meta name="description" content="I build websites and apps with an eye for detail and driven by creativity since 2001.">
    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta property='og:image' content='/apple-touch-icon-precomposed.png'/>
    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
    <style type="text/css">
    body {
@@ -83,17 +84,17 @@
    <div class="content" ng-class="loaded?'animated fadeIn':'hidden'">
       <section class="navigation" ng-hide="!showNav" ng-class="showNav?'animated fadeInDown':'animated fadeOutUp'">
          <ul class="main-menu">
-            <li><a href="#recent-work" ng-click="showNav=false">Work</a>
+            <li><a du-smooth-scroll href="#recent-work" ng-click="showNav=false">Work</a>
             </li>
-            <li><a href="#skills" ng-click="showNav=false">Skills &amp; Certification</a>
+            <li><a du-smooth-scroll href="#skills" ng-click="showNav=false">Skills &amp; Certification</a>
             </li>
-            <li><a href="#work-experience" ng-click="showNav=false">Work Experience</a>
+            <li><a du-smooth-scroll href="#work-experience" ng-click="showNav=false">Work Experience</a>
             </li>
-            <li><a href="#education" ng-click="showNav=false">Education</a>
+            <li><a du-smooth-scroll href="#education" ng-click="showNav=false">Education</a>
             </li>
-            <li><a href="#testimonials" ng-click="showNav=false">Testimonials</a>
+            <li><a du-smooth-scroll href="#testimonials" ng-click="showNav=false">Testimonials</a>
             </li>
-            <li><a href="#contact" ng-click="showNav=false">Contact</a>
+            <li><a du-smooth-scroll href="#contact" ng-click="showNav=false">Contact</a>
             </li>
          </ul>
       </section>
@@ -124,9 +125,9 @@
                <a href="#recent-work" du-smooth-scroll class="btn-lg btn btn-primary animated third fadeInUp">WHAT I DID RECENTLY</a>
             </div>
             
-            <div class="scroll-down animated third pulse">
+            <a class="scroll-down animated third pulse" href="#recent-work" du-smooth-scroll>
                <i class="icon-down-open-big "></i>
-            </div>
+            </a>
             <span class="scroll-down-text">Scroll down</span>
 
          </div>
@@ -134,46 +135,44 @@
       </section>
 
       <section class="recent-work" ng-controller="WorkCtrl">
-         <a name="recent-work"></a>
+         <a name="recent-work"  id="recent-work"></a>
          <h2>Recent Work</h2>
-         <!--
+         
          <div class="container">
-         I have founded design and coded follow mobile HTML5 hybrid Apps using AngularJS, ionicframework, Gulp and Bower.
+         I love experimenting with technology and designing a strong user experience, here are a few examples of sites/apps that I have built from beginning to end using modern technologies of the time.
          </div>
-         -->
-         <div class="recent-work-item" ng-repeat="work in works">
-            <div ng-style="{'background-image':'url('+work.preview+')','background-size': 'cover','background-repeat':'no-repeat'}">
+        
+         <a href="#" class="recent-work-item" ng-repeat="work in works">
+          <div ng-style="{'background-image':'url('+work.preview+')','background-size': '100% 100%','background-repeat':'no-repeat','background-color':'#fff'}">
+                
                <div class="overlay">
                   <div class="overlay-inner">
                      <h4>{{work.title}}</h4>
                      <p>{{work.what}}</p>
-                     <a href="#">View Project</a>
+                     <!--<a href="#">View Project</a>-->
                   </div>
                </div>
             </div>
-         </div>
+         </a href="#">
       </section>
 
       <section class="skills">
-         <a name="skills"></a>
+         <a name="skills"   id="skills"></a>
          <div class="container">
             <h2>Skills &amp; Certification</h2>
 
             <ul>
                <li>
-                  <span>Agile / Scrum
+                  <span class="expert">Agile / Scrum
+                  </span>
+               </li>
+               
+               <li>
+                  <span class="expert">Web Applications
                   </span>
                </li>
                <li>
-                  <span>Hybrid App development
-                  </span>
-               </li>
-               <li>
-                  <span>Web Applications
-                  </span>
-               </li>
-               <li>
-                  <span>JavaScript / NodeJs
+                  <span class="expert">JavaScript / NodeJs
                   </span>
                </li>
                <li>
@@ -185,11 +184,15 @@
                   </span>
                </li>
                <li>
-                  <span>LESS / CSS / HTML5
+                  <span class="expert">LESS / CSS / HTML5
                   </span>
                </li>
                <li>
                   <span>Cloud / DBaaS / REST
+                  </span>
+               </li>
+               <li>
+                  <span>Hybrid App development
                   </span>
                </li>
                <li>
@@ -201,7 +204,7 @@
                   </span>
                </li>
                <li>
-                  <span>PHP / Zend Framework
+                  <span class="expert">PHP / Zend Framework
                   </span>
                </li>
                <li>
@@ -231,7 +234,7 @@
       </section>
 
       <section class="work-experience">
-         <a name="work-experience"></a>
+         <a name="work-experience" id="work-experience"></a>
          <h2>Work Experience</h2>
          <ul class="timeline">
 
@@ -301,7 +304,7 @@
       </section>
 
       <section class="education">
-         <a name="education"></a>
+         <a name="education" id="education"></a>
          <div class="container">
             <h2>Education</h2>
             <ul>
@@ -313,7 +316,7 @@
                   
                </li>
                <li>
-                  <span><strong>Bachelor of Science</strong><br />
+                  <span><strong>Bachelor of Science (BSc), Mathematics, Physics</strong><br />
                     Govt. FC College, Lahore - Pakistan
                     <i>1996 - 1998</i>
                   </span>
@@ -326,14 +329,14 @@
       </section>
 
       <section class="testimonials">
-         <a name="testimonials"></a>
+         <a name="testimonials" id="testimonials"></a>
          <div class="container">
-            <h3>Testimonials</h3>
+            <h2>Testimonials</h2>
 
             <ul ng-controller="TestimonialCtrl">
                <li ng-repeat="testimonial in testimonials">
                   <blockquote>{{testimonial.what}}</blockquote>
-                  <span>{{testimonial.who}} <i>Head of Technology</i>
+                  <span><img ng-src="{{testimonial.avatar}}"> <a href="{{testimonial.site}}">{{testimonial.who}}</a> <i>{{testimonial.role}}</i>
                   </span>
                </li>
 
@@ -346,7 +349,7 @@
 
          <div class="container">
 
-            <a name="contact"></a>
+            <a name="contact" id="contact"></a>
             <div class="contact-info">
 
 
@@ -371,11 +374,9 @@
 
 
             <ul class="social">
-               <li><a href="#"><i class="icon-github-circled"></i></a>
+               <li><a target="_blank" href="https://github.com/zraza"><i class="icon-github-circled"></i></a>
                </li>
-               <li><a href="#"><i class="icon-linkedin"></i></a>
-               </li>
-               <li><a href="#"><i class="icon-twitter"></i></a>
+               <li><a target="_blank" href="https://www.linkedin.com/pub/zeeshan-raza"><i class="icon-linkedin"></i></a>
                </li>
 
             </ul>
@@ -400,7 +401,8 @@
    <!-- inject:vendor:js -->
    <script src="/angular/angular.js"></script>
    <script src="/angular-route/angular-route.js"></script>
-   <script src="/angular-scroll/angular-scroll.min.js"></script>
+   <script src="/angular-scroll/angular-scroll.js"></script>
+   <script src="/angular-head-return/src/angular-head-return.js"></script>
    <!-- endinject -->
    <!-- inject:js -->
    <script src="/modules/default/bootstrap.js"></script>
@@ -411,22 +413,18 @@
    <script src="/app.js"></script>
    <script src="/app-templates.js"></script>
    <!-- endinject -->
-   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+   
    <script>
-   (function(b, o, i, l, e, r) {
-      b.GoogleAnalyticsObject = l;
-      b[l] || (b[l] =
-         function() {
-            (b[l].q = b[l].q || []).push(arguments)
-         });
-      b[l].l = +new Date;
-      e = o.createElement(i);
-      r = o.getElementsByTagName(i)[0];
-      e.src = '//www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e, r)
-   }(window, document, 'script', 'ga'));
-   ga('create', 'UA-XXXXX-X');
-   ga('send', 'pageview');
+   
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-55669588-1', 'auto');
+  ga('send', 'pageview');
+
+
    </script>
 </body>
 
