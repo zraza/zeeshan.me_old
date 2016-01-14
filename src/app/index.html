@@ -88,8 +88,8 @@
             </li>
             <li><a du-smooth-scroll href="#skills" ng-click="showNav=false">Skills &amp; Certification</a>
             </li>
-            <li><a du-smooth-scroll href="#work-experience" ng-click="showNav=false">Work Experience</a>
-            </li>
+            <!--<li><a du-smooth-scroll href="#work-experience" ng-click="showNav=false">Work Experience</a>
+            </li>-->
             <li><a du-smooth-scroll href="#education" ng-click="showNav=false">Education</a>
             </li>
             <li><a du-smooth-scroll href="#testimonials" ng-click="showNav=false">Testimonials</a>
@@ -122,7 +122,7 @@
                <strong>since 2001</strong>
             </h2>
             <div>
-               <a href="#recent-work" du-smooth-scroll class="btn-lg btn btn-primary animated third fadeInUp">WHAT I DID RECENTLY</a>
+               <a href="https://github.com/zraza" target="_blank" du-smooth-scroll class="btn-lg btn btn-primary animated third fadeInUp">OPEN SOURCE CONTRIBUTION</a>
             </div>
             
             <a class="scroll-down animated third pulse" href="#recent-work" du-smooth-scroll>
@@ -133,7 +133,7 @@
          </div>
 
       </section>
-
+<!--
       <section class="recent-work" ng-controller="WorkCtrl">
          <a name="recent-work"  id="recent-work"></a>
          <h2>Recent Work</h2>
@@ -149,13 +149,13 @@
                   <div class="overlay-inner">
                      <h4>{{work.title}}</h4>
                      <p>{{work.what}}</p>
-                     <!--<a href="#">View Project</a>-->
+                     
                   </div>
                </div>
             </div>
          </a href="#">
       </section>
-
+-->
       <section class="skills">
          <a name="skills"   id="skills"></a>
          <div class="container">
@@ -180,13 +180,26 @@
                   </span>
                </li>
                <li>
-                  <span>Gulp / Grunt / Bower
+                  <span>Angular Material
                   </span>
                </li>
                <li>
-                  <span class="expert">LESS / CSS / HTML5
+                  <span>Ionic Framework
                   </span>
                </li>
+               <li>
+                  <span>Bootstrap / Foundation
+                  </span>
+               </li>
+                <li>
+                  <span class="expert">LESS / SASS / CSS / HTML5
+                  </span>
+               </li>
+               <li>
+                  <span>Gulp / Grunt / Bower
+                  </span>
+               </li>
+              
                <li>
                   <span>Cloud / DBaaS / REST
                   </span>
@@ -205,6 +218,10 @@
                </li>
                <li>
                   <span class="expert">PHP / Zend Framework
+                  </span>
+               </li>
+               <li>
+                  <span class="expert">Laravel / Lumen
                   </span>
                </li>
                <li>
@@ -237,6 +254,39 @@
          <a name="work-experience" id="work-experience"></a>
          <h2>Work Experience</h2>
          <ul class="timeline">
+
+         <!-- Item 0 -->
+            <li>
+               <div class="direction-l">
+                  <div class="flag-wrapper">
+                     <span class="flag">Lead Front-end Developer</span>
+                  </div>
+
+                  <div class="detail">
+                     <h3>Cambridge Satchel Company</h3>
+                     <span>November 2014 — January 2016</span>
+                     <p>
+                     My role was to build AngularJS, mobile first SPA with reusable, modular (John Papa Style Guide), SOLID architecture, completely decoupled business logic from DOM, talking to RESTful APIs, using ionicframework, HTML5, LESS/SASS, Gulp, Git, Bower in Agile environment.
+</p><p>
+Created AngularJS frontend for a Christmas advent calendar using "Angular Material Design" and Parse.com as RESTful backend.
+</p><p>
+Created AngularJS Orders module to manage order life cycle from getting new orders to find products in the warehouse, customization and manage deliveries. The application communicate with the Mule REST API to manage orders and MetaPack for creating consignments and printing labels.
+</p><p>
+Created AngularJS realtime Stock module to manage company stocks in realtime using Firebase and Mule REST API for data persistence.
+</p><p>
+Created AngularJS Products module to create/manage products talking to Mule REST API for data persistence.
+After almost one year of development, the application has changed the way company was working; from last
+year chaos and having many unhappy clients during busy periods (BlackFriday/Christmas) to meet delivery promises with smooth orders management, realtime stocks, and super easy/consistent process of creating/maintaining products.
+</p><p>
+The application is heavily using promises, Angular UI router, Angular bindings, directives, providers, services, modules, filters and is covered cross browser BDD tests using protractor. The development setup includes tasks automation using Gulp and Bower for frontend package management.
+</p>
+
+
+                  </div>
+
+               </div>
+            </li>
+
 
             <!-- Item 1 -->
             <li>
@@ -336,7 +386,7 @@
             <ul ng-controller="TestimonialCtrl">
                <li ng-repeat="testimonial in testimonials">
                   <blockquote>{{testimonial.what}}</blockquote>
-                  <span><img ng-src="{{testimonial.avatar}}"> <a href="{{testimonial.site}}">{{testimonial.who}}</a> <i>{{testimonial.role}}</i>
+                  <span><a href="{{testimonial.site}}">{{testimonial.who}}</a> <i>{{testimonial.role}}</i>
                   </span>
                </li>
 
@@ -359,7 +409,7 @@
                   </span>
                   <ul>
                      <span itemprop="address">
-                        <li>London, United Kindom</li>
+                        <li>London, United Kingdom</li>
                      </span>
                      <span itemprop="telephone">
                         <li>++44 7411435522</li>
@@ -402,7 +452,6 @@
    <script src="/angular/angular.js"></script>
    <script src="/angular-route/angular-route.js"></script>
    <script src="/angular-scroll/angular-scroll.js"></script>
-   <script src="/angular-head-return/src/angular-head-return.js"></script>
    <!-- endinject -->
    <!-- inject:js -->
    <script src="/modules/default/bootstrap.js"></script>

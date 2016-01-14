@@ -2,7 +2,7 @@ angular.module('app', [
    'ngRoute',
    'duScroll',
    'app.default',
-   'zanbeel'
+   //'zanbeel'
 ]).config(function($routeProvider, $locationProvider /*, $provide*/ ) {
    'use strict';
    // Use html5 push state for SEO friendly URL, DO NOT prefix URLs # while this is set to true, for non HTML5 browser, AngularJS will fallback to # automatically
